@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: springRabbitMq
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    port: 587
+    username:
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: myuser
+    password: mypassword
+
+server:
+  port: 9091
+
+application:
+  mail:
+    sent:
+      from: no-reply@food.com
+
+rabbitmq:
+  queue:
+    email:
+      name: email_queue
+  exchange:
+    email:
+      name: email_exchange
+  binding:
+    email:
+      name: email_routing_key
